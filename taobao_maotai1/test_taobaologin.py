@@ -233,6 +233,62 @@ class UsernameLogin():
         # print(fg)
         DE=re.search(r'"reason":"(.*?)"', fg)
         print(DE)
+        
+        
+    def post_demo1(self):
+        url = "https://gm.mmstat.com//fsp.1.3"
+        data = {"gmkey": "OTHER",
+                "gokey": "appcacheTime=0&connectTime=0&delay=10.99&domReadyTime=714&effectiveType=4g&firstPaintTime=310&hash=&initDomTreeTime=113&last_pos=130.5%252C381&loadEventTime=51&loadTime=1035&lookupDomainTime=0&page=https%253A%252F%252Fbuy.tmall.com%252Forder%252Fconfirm_order.htm&patch_ver=-&pid=punish-page&query=spm%253Da1z0d.6639537.0.0.undefined&raw_ua=Mozilla%252F5.0%2520(Windows%2520NT%25206.1%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F86.0.4240.111%2520Safari%252F537.36&readyStart=10&redirectTime=0&referrer=https%253A%252F%252Fcart.taobao.com%252F&rel=&requestTime=147&scr=1920x1080&spm_a=0&spm_b=0&tillDomLookupEndTime=10&tillDomReadyTime=280&tillResponseEndTime=167&title=%25E9%25AA%258C%25E8%25AF%2581%25E7%25A0%2581%25E6%258B%25A6%25E6%2588%25AA&totalTime=1045&tracker_ver=4.0.0&type=3&ua=Mozilla%252F5.0%2520(Windows%2520NT%25206.1%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F86.0.4240.111%2520Safari%252F537.36&uid=b682bbeb3edea6620c2257ce9b3ce628__1.1.1&unloadEventTime=0",
+                "logtype": "2"}
+        headers = {'Content-Type': 'text/plain;charset=UTF-8',
+                   'Sec-Fetch-Dest': 'empty',
+                   'Sec-Fetch-Mode': 'no-cors',
+                   'Sec-Fetch-Site': 'cross-site',
+                   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36'}
+        json = {
+            "gmkey": "OTHER",
+            "gokey": "appcacheTime=0&connectTime=0&delay=10.99&domReadyTime=714&effectiveType=4g&firstPaintTime=310&hash=&initDomTreeTime=113&last_pos=130.5%252C381&loadEventTime=51&loadTime=1035&lookupDomainTime=0&page=https%253A%252F%252Fbuy.tmall.com%252Forder%252Fconfirm_order.htm&patch_ver=-&pid=punish-page&query=spm%253Da1z0d.6639537.0.0.undefined&raw_ua=Mozilla%252F5.0%2520(Windows%2520NT%25206.1%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F86.0.4240.111%2520Safari%252F537.36&readyStart=10&redirectTime=0&referrer=https%253A%252F%252Fcart.taobao.com%252F&rel=&requestTime=147&scr=1920x1080&spm_a=0&spm_b=0&tillDomLookupEndTime=10&tillDomReadyTime=280&tillResponseEndTime=167&title=%25E9%25AA%258C%25E8%25AF%2581%25E7%25A0%2581%25E6%258B%25A6%25E6%2588%25AA&totalTime=1045&tracker_ver=4.0.0&type=3&ua=Mozilla%252F5.0%2520(Windows%2520NT%25206.1%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F86.0.4240.111%2520Safari%252F537.36&uid=b682bbeb3edea6620c2257ce9b3ce628__1.1.1&unloadEventTime=0",
+            "logtype": "2"
+        }
+        r = s.post(url, data=data, headers=headers, json=json)
+        print(r.status_code)
+        print(r.raise_for_status())
+        print(r.reason)
+        fg = (r.text.encode('GBK', 'ignore').decode('GBk'))
+        DE1 = re.search(r'"reason":"(.*?)"', fg)
+        print(fg)
+
+    def post_demo2(self):
+        url = "https://gm.mmstat.com/x.p.d"
+        data = {"gmkey": "OTHER",
+                "gokey": "_s%3D1611713061163%26_e%3D1611713072150%26from%3Dbeforeunload%26uidaplus%3D1085830744%26_hng%3DCN%25257Czh-CN%25257CCNY%25257C156%26aws%3D1%26jsver%3Daplus_std%26lver%3D8.14.8%26pver%3D0.7.11%26cache%3D44a774d%26page_cna%3Dnl8ZGHHK9kYCAduHteKJcpFo%26_slog%3D0",
+                "cna": "nl8ZGHHK9kYCAduHteKJcpFo",
+                "_p_url": "https%3A%2F%2Fbuy.tmall.com%2Forder%2Fconfirm_order.htm%3Fspm%3Da1z0d.6639537.0.0.undefined",
+                "_gr_uid_": "1085830744",
+                "spm-cnt": "0.0.0.0.2eb5QK5cQK5cL1",
+                "logtype": "2"}
+        headers = {'Content-Type': 'text/plain;charset=UTF-8',
+                   'Sec-Fetch-Dest': 'empty',
+                   'Sec-Fetch-Mode': 'no-cors',
+                   'Sec-Fetch-Site': 'cross-site',
+                   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36'}
+        json = {
+            "gmkey": "OTHER",
+            "gokey": "_s%3D1611713061163%26_e%3D1611713072150%26from%3Dbeforeunload%26uidaplus%3D1085830744%26_hng%3DCN%25257Czh-CN%25257CCNY%25257C156%26aws%3D1%26jsver%3Daplus_std%26lver%3D8.14.8%26pver%3D0.7.11%26cache%3D44a774d%26page_cna%3Dnl8ZGHHK9kYCAduHteKJcpFo%26_slog%3D0",
+            "cna": "nl8ZGHHK9kYCAduHteKJcpFo",
+            "_p_url": "https%3A%2F%2Fbuy.tmall.com%2Forder%2Fconfirm_order.htm%3Fspm%3Da1z0d.6639537.0.0.undefined",
+            "_gr_uid_": "1085830744",
+            "spm-cnt": "0.0.0.0.2eb5QK5cQK5cL1",
+            "logtype": "2"
+        }
+        r = s.post(url, data=data, headers=headers,json=json)
+        print(r.status_code)
+        print(r.status_code)
+        print(r.raise_for_status())
+        print(r.reason)
+        fg = (r.text.encode('GBK', 'ignore').decode('GBk'))
+        DE1 = re.search(r'"reason":"(.*?)"', fg)
+        print(fg)
 
 
 
